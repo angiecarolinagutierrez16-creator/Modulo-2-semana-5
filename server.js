@@ -14,7 +14,7 @@ app.get('/saludo', (req, res) => {
 
 app.get('/mensaje/:nombre', (req, res) => {
   const nombre = req.params.nombre;
-  res.send('Hola ' + anyi);
+  res.send('Hola ' + nombre);
 });
 
 // Ruta POST para reportes
