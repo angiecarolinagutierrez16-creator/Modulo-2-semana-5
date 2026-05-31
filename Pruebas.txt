@@ -1,0 +1,2 @@
+1. http://localhost:3000
+ → Muestra el texto "Servidor activo". Es la ruta principal.

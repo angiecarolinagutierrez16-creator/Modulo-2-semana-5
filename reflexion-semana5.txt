@@ -1,0 +1,8 @@
+Pregunta 9:
+
+1. Centralizan y clasifican los Reportes (Rutas POST)
+2. Automatizan las Alertas en Tiempo Real
+3. Filtran y muestran la información que importa (Rutas GET)
+4. Conectan la comunidad con servicios externos
+
+Sin una API, los reportes comunitarios serian solo un montón de mensajes de texto desordenados en el teléfono de un administrador. Con la API, cada reporte se convierte en un dato estructurado, rastreable y útil que se mueve automáticamente al lugar correcto.

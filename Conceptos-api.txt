@@ -1,0 +1,26 @@
+¿Qué hace la ruta POST /reporte?
+
+•⁠  ⁠Recibe datos en formato JSON desde el cliente.
+•⁠  ⁠Extrae el campo "mensaje" del cuerpo de la solicitud (req.body.mensaje).
+•⁠  ⁠Responde con un objeto JSON que confirma la recepción: { estado: "Reporte recibido", mensaje: "..." }.
+
+¿Para qué podría servir en una aplicación comunitaria?
+
+1. La ruta principal: ⁠app.get('/')⁠
+ Para qué sirve: Es la puerta de entrada.
+ En tu app comunitaria: Cuando un vecino abra la aplicación en su celular, esta ruta es la que se encarga de revisar que la app esté conectada y le da la bienvenida con un mensaje en la pantalla principal (como el "Servidor activo" o un "Bienvenidos a la App de la Comunidad").
+2. La ruta de saludo: ⁠app.get('/saludo')⁠
+ Para qué sirve: Muestra un mensaje fijo para todos.
+ En tu app comunitaria: Podría servir para mostrar la frase o el lema de la comunidad de esa semana, o una sección fija de anuncios generales del tipo: "Hola comunidad, recuerden que este domingo hay asamblea".
+3. La ruta personalizada: ⁠app.get('/mensaje/:nombre')⁠
+ Para qué sirve: Lee el nombre que pongas en la URL y responde saludando directamente a esa persona.
+ En tu app comunitaria: Es lo que permite que la aplicación sea personalizada. Cuando la vecina María inicia sesión, la app usa esta ruta para decirle: "Hola María", mostrando su perfil y sus datos específicos en lugar de un mensaje genérico.
+4. La ruta de reportes: ⁠app.post('/reporte')⁠
+ Para qué sirve: Es la más importante de todas porque recibe información que envían los usuarios (usa el método POST).
+ En tu app comunitaria: Esta es la ruta que permite la acción. Sirve para que un vecino pueda llenar un formulario en su celular y enviar un reporte a los administradores. Por ejemplo:
+ Reportar un daño: "Hay un tubo roto en la calle principal".
+ Dejar una queja o sugerencia.
+ Reportar una emergencia de seguridad.
+ Inscribirse a un evento comunitario.
+Cuando el vecino le da al botón "Enviar reporte", los datos viajan a esta ruta de tu servidor, y el código responde con el ⁠estado: "Reporte recibido"⁠, asegurándole al vecino que su mensaje llegó a salvo.
+Como ves, con solo estas cuatro rutas ya tienes la base completa para que los vecinos lean información (GET) y envíen reportes o alertas a la comunidad (POST).
